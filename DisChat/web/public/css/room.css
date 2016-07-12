@@ -1,0 +1,143 @@
+/* reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:98%;font-family: 'Open Sans', sans-serif;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0px;padding:0px;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/* start editing from here */
+a{text-decoration:none;}
+.txt-rt{text-align:right;}/* text align right */
+.txt-lt{text-align:left;}/* text align left */
+.txt-center{text-align:center;}/* text align center */
+.float-rt{float:right;}/* float right */
+.float-lt{float:left;}/* float left */
+.clear{clear:both;}/* clear float */
+.pos-relative{position:relative;}/* Position Relative */
+.pos-absolute{position:absolute;}/* Position Absolute */
+.vertical-base{	vertical-align:baseline;}/* vertical align baseline */
+.vertical-top{	vertical-align:top;}/* vertical align top */
+nav.vertical ul li{	display:block;}/* vertical menu */
+nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
+img{max-width:100%;}
+/*end reset*/
+
+body{
+padding:0;
+margin:0;
+	font-family: 'Josefin Slab', serif;
+	background:rgba(37, 52, 125, 0.87);
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin:0;			   
+}	
+p{
+	margin:0;
+}
+ul{
+	margin:0;
+	padding:0;
+}
+.content{
+	padding: 4em 0;
+}
+
+.main{
+	width: 50%;
+	height: 500px;
+	/*border: 1px solid #9FA8E6;*/
+	margin: 10px auto;
+	background: #fff;	
+}
+.main h1{
+	text-align: left;
+	font-size:20px;
+	color:#fff;
+	font-weight: normal;
+	background: rgba(37, 52, 125, 0.87);
+	padding-bottom: 5px;
+}
+.header{
+	width: 100%;
+	height: 40px;
+	background: #082A77;
+}
+.header h1{
+	text-align: left;
+	font-size:20px;
+	color:#fff;
+	font-weight: normal;
+	padding: 10px 10px;
+	float: left;	
+}
+.header a{
+	text-align: right;
+	padding: 10px 10px;
+	/*background: #C21128;*/
+	color: #fff;
+	float: right;
+}
+.header a:hover{
+	color: #2C77CA;
+}
+.header img{
+	width: 40px;
+	height: 40px;
+	border-radius: 20px 20px;
+	float: left;
+	margin: 0 0 0 5px;
+}
+.header label{
+	color: #fff;
+	padding: 10px 20px;
+	float: left;
+}
+.chat-title{	
+	width: 99.7%;
+	height: 30px;
+	background: #082A77;
+	margin: 1px 1px;
+}
+.chat-title h1{
+	text-align: left;
+	font-size:12px;
+	color:#fff;
+	font-weight: normal;
+	padding: 7px 10px;
+	float: left;
+	background: #082A77;
+}
+.chat-body{
+	width: 100%;
+	height: 400px;	
+}
+.chat-body-left{
+	width: 70%;
+	height: 393px;
+	float: left;	
+	border-right: 1px solid #999;	
+	clear: both;
+}
+.chat-body-right{
+	width: 30%;
+	height: 393px;	
+	margin-left: 70%;	
+}
+.chat-box{
+	width: 100%;
+	height: 35px;
+	background: #346CEC;
+	/*border: 1px solid #999;*/
+		
+}
+.chat-body input[type='text']{
+	width: 97%;
+	height: 25px;
+	resize: none;
+	margin: 5px 5px;
+	border-radius: 2px 2px;
+	border: none;
+	padding: 0 5px;
+	/*box-shadow: 2px 2px 2px #999;*/
+}

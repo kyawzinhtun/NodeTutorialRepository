@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{title}}</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href="../css/chatrooms.css" rel="stylesheet" type="text/css" media="all" />
+	<script type="text/javascript" src="../jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript">
+		$(function(){			
+			var host = '{{config.host}}';
+			var socket = io.connect(host + '/roomlist');
+			socket.on('connect', function(){
+				console.log("Connection Estiblished !");
+			})
+
+			socket.on('roomupdate',function(data){
+				var procData = JSON.parse(data);
+				$('.room-list').html('');
+				for(var i =0; i<procData.length; i++){
+					var str = '<a href="room/' + procData[i].room_number+'"><li>' + procData[i].room_name + '</li></a>'
+					$('.room-list').prepend(str);
+				}
+			})
+
+		$(document).on('click', '#create', function(){
+			var room_name = $('.txt-new-room').val();
+			if(room_name != ''){
+				var room_number = parseInt(Math.random() * 10000);
+				socket.emit('newroom', {room_name : room_name, room_number : room_number});
+				$('.txt-new-room').val('');
+			}
+		})
+		})
+	</script>
+</head>
+<body>
+<div class="content">
+
+<div class="main">
+<h1>DisChat</h1>
+<hr/>
+<div class="header">
+	<div class="profile"><img src="{{user.profilePic}}"/><label>{{user.fullName}}</label></div>
+	<div class="logout"><a href="/logout">Logout</a></div> 
+</div>
+
+<div class="chat-body">
+<div class="create-panel">
+	<input type="text" autocomplete="off" class="txt-new-room" />
+	<button id="create">Create room</button>
+</div>	
+
+<div class="title-list">
+	<ul class="room-list">
+		<!-- <a href="#"><li>NodeJS</li></a>
+		<a href="#"><li>AngularJS</li></a>
+		<a href="#"><li>MEAN Stacks</li></a> -->
+	</ul>
+</div>	
+</div>
+
+</div>
+</div>
+</body>
+</html>

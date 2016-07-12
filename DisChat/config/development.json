@@ -1,0 +1,20 @@
+{
+	"dbURL" : "mongodb://kyawzinhtun:kzhtmk1101@ds015915.mlab.com:15915/dischat",
+	"sessionSecret" : "FASFEADFADFE392958",
+	"fb" : {
+		"appID" : "832237486910598",
+		"appSecret" : "f6ff91618f01ad2e6d09a9c30bac54a2",
+		"callbackURL" : "http://localhost:3000/auth/facebook/callback"
+	},
+	"google" : {
+		"appID" : "542101706122-jc8d320vvcji444q3uaqa7k88ncdmutb.apps.googleusercontent.com",
+		"appSecret" : "KQq3ne-GnbWevQzMezgkISCR",
+		"callbackURL" : "http://localhost:3000/auth/google/callback"
+	},
+	"twitter" :{
+		"appID" : "2WyiocmgyOR0fFQI0PhJFGg2l",
+		"appSecret" : "ogtjkTYj5PZG9DzIlfN9m7bEVEAs9pkAe7miZvczifaf8jiww9",
+		"callbackURL" : "http://127.0.0.1:3000/auth/twitter/callback"
+	},
+	"config" : "http://localhost:3000"
+}
