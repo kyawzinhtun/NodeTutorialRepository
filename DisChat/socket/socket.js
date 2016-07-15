@@ -9,4 +9,8 @@ module.exports = function(io, rooms){
 			socket.emit('roomupdate', JSON.stringify(rooms));
 		})
 	})
+
+	var messages = io.of('/messages').on('connection', function(socket){
+		console.log('Connected to chat room !');
+	})
 }
